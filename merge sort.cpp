@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include<ctype.h>
 #include<time.h>
-
 void vetrand(int *v, int size)
 {
 	srand(time(NULL));
