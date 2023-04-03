@@ -1,5 +1,5 @@
 #include <string.h>
-
+\\ Recebe um vetor de palavras e as reune em uma única sentença
 char *smash (const char *const words[], size_t nb_words)
 {
 	size_t len=0;
