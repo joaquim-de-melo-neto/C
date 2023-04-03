@@ -1,0 +1,12 @@
+typedef struct {
+	int content;
+	cell *seg; 
+}cell;
+
+void Imprime(cell *lista){
+	cell *ptr;
+
+	for(ptr=lista;ptr!=NULL;ptr=ptr->seg){
+		printf("%d ",ptr->content);
+	}
+}

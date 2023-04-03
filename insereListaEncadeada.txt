@@ -1,0 +1,15 @@
+typedef struct {
+	int content;
+	cell *seg; 
+}cell;
+
+/* A função insere uma nova célula em uma lista encadeada
+* entre a célula p e a seguinte (supõe-se que p != NULL ).
+* A nova célula terá conteúdo y. */
+void insere(int y, cell *lista){
+	cell *nova;
+	nova = malloc(sizeof(cell));
+	nova->content = y;
+	nova->seg = p->seg;
+	p->seg = nova;
+}

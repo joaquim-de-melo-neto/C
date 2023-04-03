@@ -1,0 +1,15 @@
+typedef struct {
+	int content;
+	cell *seg; 
+}cell;
+
+/* Esta função recebe o endereço p de uma célula em uma
+* lista encadeada e remove da lista a célula p->seg .
+* A função supõe que p != NULL e p->seg != NULL. */
+void remove(cell *lista){
+	cell *lixo;
+	lixo = lista->seg;
+	lista->seg = lixo->seg
+	free(lixo);
+	
+}
