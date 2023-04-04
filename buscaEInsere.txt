@@ -1,0 +1,18 @@
+/*Recebe uma lista encadeada lst com cabeça e insere uma
+* nova célula na lista imediatamente antes da primeira que
+* contiver x. Se nenhuma célula contiver x, a nova célula
+* será inserida no fim da lista. A nova célula terá
+* conteúdo y. */
+void BuscaEInsere (int y, int x, célula *lst) {
+	célula *p, *q, *nova;
+	nova = malloc (sizeof (célula));
+	nova->conteúdo = y;
+	p = lst;
+	q = lst->seg;
+	while (q != NULL && q->conteúdo != x) {
+		p = q;
+		q = q->seg;
+	}
+	nova->seg = q;
+	p->seg = nova;
+}
