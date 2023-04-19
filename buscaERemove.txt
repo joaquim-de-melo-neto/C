@@ -13,3 +13,4 @@ if (q != NULL) {
 p->seg = q->seg;
 free (q);
 }
+}

@@ -1,0 +1,46 @@
+void merge(int *v, int l, int m, int r){
+	int i = l;
+	int j = m+1;
+	int k = l;
+	
+	int temp[20];
+	
+	while(i <= m && j <= r){
+		if(v[i] <= v[j]){
+			temp[k] = v[i];
+			i++;
+			k++;
+		}
+		else{
+			temp[k] = v[j];
+			j++;
+			k++;
+		}
+	}
+	while(i <= m){
+		temp[k] = v[i];
+		i++;
+		k++;
+	}
+	while(j <= r){
+		temp[k] = v[j];
+		j++;
+		k++;
+	}
+	for(int p = l; p <= r; p++){
+		v[p] = temp[p];
+	}	
+}
+
+void mergesort(int *v, int l, int r){
+	
+	
+	if(l<r){
+		int m = (l+r)/2;
+	
+	mergesort(v,l,m);
+	mergesort(v,m+1,r);
+	
+	merge(v,l,m,r);
+	}
+}

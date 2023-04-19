@@ -1,0 +1,8 @@
+float lg(unsigned int n){ // Recebe um valor inteiro e positivo n e retorna o logaritmo natural desse numero.
+	
+	double x = 0;  
+	
+	x = log((double)n)/log(2);
+	
+	return (int)(x);
+}

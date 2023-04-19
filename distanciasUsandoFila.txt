@@ -7,7 +7,7 @@ vetor d
 int *Distâncias (int **A, int n, int o) {
 	int *d, x, y;
 	int *f, s, t;
-	d = malloc (n * sizeof (int)); 2
+	d = malloc (n * sizeof (int)); 
 	for (x = 0; x < n; x++) d[x] = -1;
 	d[o] = 0;
 	f = malloc (n * sizeof (int));
