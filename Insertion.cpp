@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
+
 void vetshow(int *v, int size)
 {
 	for(int i=0;i<size;i++)
@@ -10,6 +11,7 @@ void vetshow(int *v, int size)
 	printf("\n");
 }
 
+//Insere um elemento em um vetor em uma posição especificada
 int insertion(int v[], int index, int x, int size){
 	for(int i=size-1;i>=index;i--){
 		v[i+1] = v[i];
