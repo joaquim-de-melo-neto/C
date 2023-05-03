@@ -1,9 +1,0 @@
-// Insere o valor x no elemento de indexador index do vetor v e retorna o novo tamanho do vetor. 
-int insertion(int v[], int index, int x, int size){
-	for(int i = size-1 ; i >= index ; i--){ // A interação coloca os elementos uma casa para a direita a partir do fim até o indexador index.
-		v[i+1] = v[i];
-	}
-	v[index] = x; // o valor x é inserido na posição informada ao parâmetro index.
-	
-	return ++size;
-}

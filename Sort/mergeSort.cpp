@@ -58,8 +58,6 @@ int main(int argc, char** argv){
 	vetrand(v,10);
 	vetshow(v,10);
 	printf("\n");
-	
-	// Esses dois insertionSort serviram para orientar as duas metades do vetor.Sem eles o vetor não ficaria orientado
 	mergeSort(v,0,10);
 	vetshow(v,10);
 }
