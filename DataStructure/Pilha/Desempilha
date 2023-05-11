@@ -1,0 +1,8 @@
+int Desempilha (célula *p) {
+int x; célula *q;
+q = p->seg;
+x = q->valor;
+p->seg = q->seg;
+free (q);
+return x;
+}
