@@ -1,0 +1,11 @@
+typedef struct cel {
+int valor;
+struct cel *seg;
+} célula;
+
+int main(){
+  célula cabeça;
+  célula *p;
+  p = &cabeça;
+  p->seg = NULL;
+}  
