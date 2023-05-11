@@ -1,0 +1,7 @@
+void Empilha (int y, célula *p) {
+célula *nova;
+nova = malloc (sizeof (célula));
+nova->valor = y;
+nova->seg = p->seg;
+p->seg = nova;
+}
