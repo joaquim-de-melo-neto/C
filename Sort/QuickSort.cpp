@@ -29,14 +29,31 @@ int Separa (int p, int r, int v[]) {
 	return j;
 }
 
-/* Esta fun��o rearranja o vetor ?[p..r], com p <= r+1,
+/* Esta função rearranja o vetor υ[p..r], com p <= r+1,
 * de modo que ele fique em ordem crescente. */
 void Quicksort (int p, int r, int v[]) {
 	int j;
 	if (p < r) {
 		j = Separa (p, r, v);
-		Quicksort (p, j - 1, v);
-		Quicksort( j + 1, r, v);
+		Quicksort(p, j - 1, v);
+		Quicksort(j + 1, r, v);
+	}
+}
+
+/* Esta função rearranja o vetor υ[p..r], com p <= r+1,
+* de modo que ele fique em ordem crescente. */
+void QuickSort2(int p, int r, int v[]) {
+	int j;
+	while (p < r) {
+		j = Separa (p, r, v);
+		if (j - p < r - j) {
+			QuickSort2 (p, j-1, v);
+			p = j + 1;
+		} 
+		else {
+			QuickSort2 (j + 1, r, v);
+			r = j - 1;
+		}
 	}
 }
 
@@ -44,6 +61,6 @@ int main(int argc, char** argv){
 	int v[11] = {50,99,78,84,0,43,23,74,26,1,33};
 	vetshow(v,11);
 	printf("\n");
-	Quicksort(0,10,v);
+	QuickSort2(0,10,v);
 	vetshow(v,11);
 }
